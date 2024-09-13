@@ -9,15 +9,5 @@ namespace ChatVisual
     {
         public ChatTree parent;
         public Node child;
-
-        private void OnValidate()
-        {
-            if (!string.IsNullOrEmpty(showName))
-            {
-                parent.humanName = showName;
-            }
-        }
-
-        public string showName;
     }
 }

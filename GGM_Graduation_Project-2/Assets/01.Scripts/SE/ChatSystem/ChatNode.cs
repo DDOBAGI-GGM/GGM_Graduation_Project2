@@ -17,6 +17,5 @@ namespace ChatVisual
 
         public List<string> loadFileName = new List<string>();
         public List<EChatEvent> textEvent = new List<EChatEvent>();
-        public string LoadNextDialog;
     }
 }

@@ -769,14 +769,14 @@ public class Chatting : MonoBehaviour
             case EChatType.Image:
             case EChatType.CutScene:
                 {
-                    ChatNode chat = ScriptableObject.CreateInstance("ChatNode") as ChatNode;
-                    chat.state = who;
-                    if (isQuestion)
-                        chat.type = EChatType.Question;
-                    else
-                        chat.type = type;
-                    chat.chatText = msg;
-                    member.chattings.Add(chat);
+                    //ChatNode chat = ScriptableObject.CreateInstance("ChatNode") as ChatNode;
+                    //chat.state = who;
+                    //if (isQuestion)
+                    //    chat.type = EChatType.Question;
+                    //else
+                    //    chat.type = type;
+                    //chat.chatText = msg;
+                    //member.chattings.Add(chat);
                 }
                 break;
             case EChatType.Question:

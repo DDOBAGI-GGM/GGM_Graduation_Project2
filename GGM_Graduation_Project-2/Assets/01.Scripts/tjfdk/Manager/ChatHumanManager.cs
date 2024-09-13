@@ -21,32 +21,32 @@ public class ChatHumanManager : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < chatContainer.chatTrees.Count; i++)
-        {
-            ChatTree chatTree = chatContainer.chatTrees[i];
-            for (int j = 0; j < chatTree.nodeList.Count; j++)
-            {
-                if (chatTree.nodeList[j] != null)
-                {
-                    chatTree.nodeList[j].is_UseThis = false;
-                    chatTree.nodeList[j].is_readThis = false;
+        //for (int i = 0; i < chatContainer.chatTrees.Count; i++)
+        //{
+        //    ChatTree chatTree = chatContainer.chatTrees[i];
+        //    for (int j = 0; j < chatTree.nodeList.Count; j++)
+        //    {
+        //        if (chatTree.nodeList[j] != null)
+        //        {
+        //            chatTree.nodeList[j].is_UseThis = false;
+        //            chatTree.nodeList[j].is_readThis = false;
 
-                    if (chatTree.nodeList[j] is ChatNode chatNode)
-                    {
-                        for (int k = 0; k < chatNode.childList.Count; k++)
-                        {
-                            if (chatNode.childList[k] == null)
-                            {
-                                chatNode.childList.RemoveAt(k);
-                            }
-                        }
-                    }
+        //            if (chatTree.nodeList[j] is ChatNode chatNode)
+        //            {
+        //                for (int k = 0; k < chatNode.childList.Count; k++)
+        //                {
+        //                    if (chatNode.childList[k] == null)
+        //                    {
+        //                        chatNode.childList.RemoveAt(k);
+        //                    }
+        //                }
+        //            }
 
-                    if (chatTree.nodeList[j] is ConditionNode conditionNode)
-                        conditionNode.is_Unlock = false;
-                }
-            }
-        }
+        //            if (chatTree.nodeList[j] is ConditionNode conditionNode)
+        //                conditionNode.is_Unlock = false;
+        //        }
+        //    }
+        //}
     }
 
     private void Update()
@@ -67,7 +67,7 @@ public class ChatHumanManager : MonoBehaviour
     public void NextChat()
     {
         // node list
-        var children = chatContainer.GetChatTree().GetChild(currentNode);
+        var children = chatContainer.GetChatTree(currentMember.name).GetChild(currentNode);
 
         foreach (Node node in children)
         {
