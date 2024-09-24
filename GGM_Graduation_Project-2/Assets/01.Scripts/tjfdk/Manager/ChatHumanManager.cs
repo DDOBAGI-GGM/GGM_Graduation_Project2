@@ -209,9 +209,9 @@ public class ChatHumanManager : MonoBehaviour
             (GameManager.Instance.chatSystem.FindMember(currentMember.name).name);
 
         // save current name
-        chatContainer.currentName = name;
+        //chatContainer.currentName = name;
         // get current nodes
-        currentNodes = chatContainer.GetChatTree().nodeList;
+        //currentNodes = chatContainer.GetChatTree().nodeList;
 
         if (currentNodes[0] is RootNode rootNode)
         {
